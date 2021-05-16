@@ -12,12 +12,12 @@ const Header = () => {
                             Web i-RURAL ini memfasilitasi pertemuan antara calon pengguna layanan internet di area rural (pedesaan/pegunungan/area yang belum terjangkau akses kabel fiber optik) dengan Telkom yang akan bekerjasama dengan ISP lain dalam memenuhi permintaan akses internet di area rural tersebut.
                 </p>
                         <div className='flex xl:flex-row flex-col xl:space-x-6 items-center'>
-                            <button className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md mb-6 xl:mb-0 w-full'>
+                            <button className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md mb-6 xl:mb-0 w-full hover:from-red-700 hover:to-red-900'>
                                 <p className='text-xl text-white'>
                                     Daftar Sebagai Pengguna
                 </p>
                             </button>
-                            <button className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md w-full'>
+                            <button className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md w-full hover:from-red-700 hover:to-red-900'>
                                 <p className='text-xl text-white'>
                                     Daftar Sebagai ISP
                 </p>

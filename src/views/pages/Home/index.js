@@ -1,6 +1,6 @@
 import React from 'react'
 import { homeContent } from '../../../assets/data'
-import { Header, Section } from '../../components'
+import { Contact, Header, Section } from '../../components'
 const Home = () => {
     return (
         <div>
@@ -10,6 +10,7 @@ const Home = () => {
                     <Section key={index} title={item.title} contents={item.contents} reverse={index % 2 !== 0} image={item.image} />
                 ))}
             </main>
+            <Contact />
         </div>
     )
 }

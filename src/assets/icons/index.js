@@ -13,8 +13,10 @@ import ICPhone from './ic-phone.svg'
 import ICSidebar from './ic-sidebar.svg'
 import ICTwitter from './ic-twitter.svg'
 import ICWhatsapp from './ic-whatsapp.svg'
+import ICWhatsappHover from './ic-whatsapp_hover.svg'
 
 export {
     ICArrow, ICCard, ICEmail, ICFacebook, ICFile, ICGps, ICInstagram, ICIsp, ICLinkedin,
-    ICLocation, ICPerson, ICPhone, ICSidebar, ICTwitter, ICWhatsapp
+    ICLocation, ICPerson, ICPhone, ICSidebar, ICTwitter, ICWhatsapp, ICWhatsappHover
 }
+

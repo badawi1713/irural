@@ -18,7 +18,7 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            <button className='hidden xl:block px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md'>
+            <button className='hidden xl:block px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
                 <p className='text-xl text-white'>
                     Daftar I-RURAL
                 </p>
