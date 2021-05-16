@@ -141,6 +141,7 @@ export const provinceList = [
 
 export const homeContent = [
     {
+        id: 'section2',
         image: IMGIllustration01,
         title: "#Internet Untuk Negeri",
         contents: [
@@ -151,6 +152,7 @@ export const homeContent = [
         ]
     },
     {
+        id: 'section2',
         image: IMGIllustration02,
         title: "#Gotong Royong & Bekerjasama Membangun Negeri",
         contents: [
@@ -161,6 +163,7 @@ export const homeContent = [
         ]
     },
     {
+        id: 'section3',
         image: IMGIllustration03,
         title: "Rincian Biaya & Konfigurasi Network",
         contents: [

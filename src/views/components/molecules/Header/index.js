@@ -1,9 +1,9 @@
 import React from 'react'
 import { IMGHeader } from '../../../../assets/images'
 
-const Header = () => {
+const Header = ({ id = "" }) => {
     return (
-        <header>
+        <header id={id}>
             <div className='bg-cover bg-no-repeat' style={{ backgroundImage: `url(${IMGHeader})` }}>
                 <div className='px-8 py-6 xl:px-24 xl:pb-24 min-h-screen flex flex-1' >
                     <div className=' self-end space-y-14'>
