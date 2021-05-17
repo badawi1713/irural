@@ -158,7 +158,7 @@ export const homeContent = [
         contents: [
             {
                 subtitle: "",
-                content: "I-RURAL disediakan dalam rangka turut serta membangun negeri dengan cara memperluas penetrasi internet ke area-area yang tidak terjangkau akses kabel sehingga pada akhirnya dapat meningkatkan kemudahan bagi masyarakat area rural mengkases dunia luar bagi peningkatan produktifitas keraja dan kesejahteraannya. Kecepatan akses sesuai pilihan pelanggan minimal up to 10 Mbps."
+                content: "I-RURAL disediakan dalam rangka turut serta membangun negeri dengan cara memperluas penetrasi internet ke area-area yang tidak terjangkau akses kabel sehingga pada akhirnya dapat meningkatkan kemudahan bagi masyarakat area rural mengkases dunia luar bagi peningkatan produktifitas kerja dan kesejahteraannya. Kecepatan akses sesuai pilihan pelanggan minimal up to 10 Mbps."
             }
         ]
     },

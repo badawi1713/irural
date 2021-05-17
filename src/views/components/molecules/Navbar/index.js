@@ -4,12 +4,10 @@ import { createUseStyles } from 'react-jss';
 import { Link } from "react-scroll";
 import { ICSidebar } from '../../../../assets/icons';
 import { IMGLogo } from '../../../../assets/images';
+import { motion } from 'framer-motion';
 
 const useStyles = createUseStyles({
     link: {
-        '&.active': {
-            color: 'red'
-        },
         '&:hover': {
             color: 'red'
         }
@@ -21,17 +19,17 @@ const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
 
     return (
         <>
-            <div className='flex flex-row w-full shadow-sm px-8 py-4 xl:px-24 items-center justify-between sticky top-0 bg-white z-20'>
+            <div className='flex flex-row w-full shadow-sm px-8 py-4 xl:px-24 items-center justify-between'>
 
                 <div className='justify-between space-x-12 items-center flex'>
                     <img src={IMGLogo} alt='logo-img' width={130} height={40} />
 
                     <nav className='hidden xl:block'>
                         <ul className='flex space-x-16'>
-                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section1'>Beranda</Link></li>
-                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-160} to='section2'>Deskripsi</Link></li>
-                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section3'>Konfigurasi Network</Link></li>
-                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section4'>Kontak Kami</Link></li>
+                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} smooth={true} duration={500} to='section1'>Beranda</Link></li>
+                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} smooth={true} duration={500} to='section2'>Deskripsi</Link></li>
+                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} smooth={true} duration={500} to='section3'>Konfigurasi Network</Link></li>
+                            <li><Link className={clsx(classes.link, 'text-xl cursor-pointer')} smooth={true} duration={500} to='section4'>Kontak Kami</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,12 +46,19 @@ const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
 
             </div>
             {
-                open && <nav className='xl:hidden block bg-white shadow-md px-8 py-4 xl:px-24 items-center justify-between fixed z-20 w-full'>
+                open && <motion.nav
+                    initial={{
+                        y: -100,
+                    }}
+                    animate={{
+                        y: 0,
+                    }}
+                    transition={{ type: 'tween', ease: 'easeInOut', duration: 1 }} className='xl:hidden block bg-white shadow-md px-8 py-4 xl:px-24 items-center justify-between absolute  w-full'>
                     <ul className='flex flex-col space-y-2'>
-                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section1'>Beranda</Link></li>
-                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section2'>Deskripsi</Link></li>
-                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section3'>Konfigurasi Network</Link></li>
-                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} activeClass='active' spy={true} smooth={true} duration={500} offset={-100} to='section4'>Kontak Kami</Link></li>
+                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth={true} duration={500} to='section1'>Beranda</Link></li>
+                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth={true} duration={500} to='section2'>Deskripsi</Link></li>
+                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth={true} duration={500} to='section3'>Konfigurasi Network</Link></li>
+                        <li><Link onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth={true} duration={500} to='section4'>Kontak Kami</Link></li>
                         <li>
                             <button onClick={closeNavHandler} className='px-6 py-2 w-full bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
                                 <p className='text-lg text-white'>
@@ -62,7 +67,7 @@ const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
                             </button>
                         </li>
                     </ul>
-                </nav>
+                </motion.nav>
             }
         </>
     )

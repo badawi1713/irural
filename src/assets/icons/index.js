@@ -1,5 +1,6 @@
 import ICArrow from './ic-arrow.svg'
 import ICCard from './ic-card.svg'
+import ICChevronUp from './ic-chevron.svg'
 import ICEmail from './ic-email.svg'
 import ICFacebook from './ic-facebook.svg'
 import ICFile from './ic-file.svg'
@@ -16,7 +17,7 @@ import ICWhatsapp from './ic-whatsapp.svg'
 import ICWhatsappHover from './ic-whatsapp_hover.svg'
 
 export {
-    ICArrow, ICCard, ICEmail, ICFacebook, ICFile, ICGps, ICInstagram, ICIsp, ICLinkedin,
+    ICArrow, ICCard, ICChevronUp, ICEmail, ICFacebook, ICFile, ICGps, ICInstagram, ICIsp, ICLinkedin,
     ICLocation, ICPerson, ICPhone, ICSidebar, ICTwitter, ICWhatsapp, ICWhatsappHover
 }
 
