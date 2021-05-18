@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Navbar } from './views/components'
 import { Home, Registration } from './views/pages'
 
@@ -20,6 +20,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/register' component={Registration} />
+          <Route render={() => <Redirect to="/" />} />
         </Switch>
       </div>
     </Router>

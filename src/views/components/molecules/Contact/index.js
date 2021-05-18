@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
 const Contact = () => {
     const classes = useStyles()
     return (
-        <div className='relative flex justify-center w-full items-center my-10'>
+        <div className='relative flex justify-center w-full items-center '>
             <img alt='banner' style={{ content: `url(${IMGBanner})` }} width={'100%'} />
             <div className='absolute flex flex-wrap xl:flex-nowrap items-center justify-center z-10 space-x-4 w-full'>
                 <p className='text-white text-sm xl:text-2xl'>Kontak Kami : </p>

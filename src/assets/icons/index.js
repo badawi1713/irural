@@ -12,12 +12,13 @@ import ICLocation from './ic-location.svg'
 import ICPerson from './ic-person.svg'
 import ICPhone from './ic-phone.svg'
 import ICSidebar from './ic-sidebar.svg'
+import ICSuccess from './ic-success.svg'
 import ICTwitter from './ic-twitter.svg'
 import ICWhatsapp from './ic-whatsapp.svg'
 import ICWhatsappHover from './ic-whatsapp_hover.svg'
 
 export {
     ICArrow, ICCard, ICChevronUp, ICEmail, ICFacebook, ICFile, ICGps, ICInstagram, ICIsp, ICLinkedin,
-    ICLocation, ICPerson, ICPhone, ICSidebar, ICTwitter, ICWhatsapp, ICWhatsappHover
+    ICLocation, ICPerson, ICPhone, ICSidebar, ICTwitter, ICWhatsapp, ICWhatsappHover, ICSuccess
 }
 
