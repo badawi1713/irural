@@ -1,6 +1,7 @@
 import React from 'react'
+import { provinceList } from '../../../../assets/data'
 import { ICEmail, ICFile, ICGps, ICIsp, ICLocation, ICPerson, ICPhone } from '../../../../assets/icons'
-import { Input, Label } from '../../atoms'
+import { Input, Label, Select } from '../../atoms'
 
 const ISPForm = () => {
     return (
@@ -15,7 +16,7 @@ const ISPForm = () => {
             <div className=' mb-14' />
             <Label title='Alamat ISP' />
             <div className='grid grid-cols-1 gap-x-4 gap-y-4 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-4'>
-                <Input label='Provinsi' type='text' />
+                <Select label='Provinsi' data={provinceList} />
                 <Input label='Kelurahan' type='text' />
                 <Input label='Kode Pos' type='text' />
                 <Input label='Alamat Lengkap' type='textarea' icon={ICLocation} fullwidth />
