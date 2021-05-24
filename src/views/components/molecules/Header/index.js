@@ -9,6 +9,10 @@ const Header = ({ id = "" }) => {
     const showUserFormHandler = value[3]
     const showISPFormHandler = value[2]
 
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <header id={id}>
             <div className='bg-cover bg-no-repeat' style={{ backgroundImage: `url(${IMGHeader})` }}>
@@ -20,13 +24,20 @@ const Header = ({ id = "" }) => {
                 </p>
                         <div className='flex xl:flex-row flex-col xl:space-x-6 items-center'>
                             <Link to='/register' className='w-full'>
-                                <button type='button' onClick={showUserFormHandler} className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md mb-6 xl:mb-0 w-full hover:from-red-700 hover:to-red-900'>
+                                <button type='button' onClick={() => {
+                                    showUserFormHandler()
+                                    scrollTop()
+                                }
+                                } className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md mb-6 xl:mb-0 w-full hover:from-red-700 hover:to-red-900'>
                                     <p className='text-xl text-white'>
                                         Daftar Sebagai Pengguna
                 </p>
                                 </button></Link>
                             <Link to='/register' className='w-full'>
-                                <button type='button' onClick={showISPFormHandler} className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md w-full hover:from-red-700 hover:to-red-900'>
+                                <button type='button' onClick={() => {
+                                    showISPFormHandler()
+                                    scrollTop()
+                                }} className='px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md w-full hover:from-red-700 hover:to-red-900'>
                                     <p className='text-xl text-white'>
                                         Daftar Sebagai ISP
                 </p>

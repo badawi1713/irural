@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { provinceList } from '../../../../assets/data'
 import { ICEmail, ICFile, ICGps, ICIsp, ICLocation, ICPerson, ICPhone } from '../../../../assets/icons'
+import { FormContext } from '../../../../context'
 import { Input, Label, Select } from '../../atoms'
 
 const ISPForm = () => {
+    const value = useContext(FormContext)
+    const showSubmitHandler = value[5]
+
+    const scrollTop = () => {
+        window.scrollTo({ top: 100, behavior: 'smooth' });
+    };
+
     return (
         <form className='w-full'>
             <Label title='Data ISP' />
@@ -31,7 +39,10 @@ const ISPForm = () => {
             </div>
             <div className=' mb-24' />
             <div className='flex w-full lg:justify-end'>
-                <button type='submit' className='w-full lg:w-auto px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
+                <button onClick={() => {
+                    showSubmitHandler()
+                    scrollTop()
+                }} type='submit' className='w-full lg:w-auto px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
                     <p className='text-xl text-white'>Daftar Sebagai ISP</p>
                 </button>
             </div>

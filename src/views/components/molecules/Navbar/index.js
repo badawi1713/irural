@@ -55,12 +55,15 @@ const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
             {
                 open && <motion.nav
                     initial={{
-                        y: -100,
+                        opacity: 0
                     }}
                     animate={{
-                        y: 0,
+                        opacity: 100,
+                        transition: {
+                            duration: 0.6
+                        }
                     }}
-                    transition={{ type: 'tween', ease: 'easeInOut', duration: 1 }} className='xl:hidden block bg-white shadow-md px-8 py-4 xl:px-24 items-center justify-between absolute  w-full'>
+                    className='xl:hidden block bg-white shadow-md px-8 py-4 xl:px-24 items-center justify-between absolute  w-full'>
                     <ul className='flex flex-col space-y-2'>
                         <li><HashLink onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth to='/#home'>Beranda</HashLink></li>
                         <li><HashLink onClick={closeNavHandler} className={clsx(classes.link, 'text-lg cursor-pointer')} smooth to='/#description'>Deskripsi</HashLink></li>

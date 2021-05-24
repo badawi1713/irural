@@ -177,7 +177,7 @@ export const homeContent = [
             },
             {
                 subtitle: "Deposit Biaya Berlangganan 1 Bulan",
-                content: "Calon pelanggan diharuskan melakukan pembayaran deposit yang besarnya sama dengan biaya bulanan (komponen abonemen Indihome). Deposit ini bukan merupakan pembayaran tagihan bulan pertama tetapi sebagai jaminan bila pelanggan meninggalkan tunggakan dan deposit akan dikembalikan kepada pelanggn bila berhenti berlangganan."
+                content: "Calon pelanggan diharuskan melakukan pembayaran deposit yang besarnya sama dengan biaya bulanan (komponen abonemen Indihome). Deposit ini bukan merupakan pembayaran tagihan bulan pertama tetapi sebagai jaminan bila pelanggan meninggalkan tunggakan dan deposit akan dikembalikan kepada pelanggan bila berhenti berlangganan."
             }
         ]
     }
