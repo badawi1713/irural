@@ -1,7 +1,7 @@
-import React from 'react'
-import { ICArrow, ICArrowUp } from '../../../../assets/icons'
-import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { ICArrow } from '../../../../assets/icons';
 
 const useStyles = createUseStyles({
     selectOption: {
@@ -20,7 +20,7 @@ const Select = ({ icon, label, data = [], fullwidth }) => {
                 {icon && <img style={{ content: `url(${icon})` }} width={20} height={20} alt='label-icon' />}
                 <p className=' text-lg text-gray-500 font-semibold '>{label}</p>
             </label>
-            <select value="" className={clsx(classes.selectOption, 'px-6 py-4 border border-gray-500 rounded-md w-full appearance-none cursor-pointer')}
+            <select defaultValue="" className={clsx(classes.selectOption, 'px-6 py-4 border border-gray-500 rounded-md w-full appearance-none cursor-pointer')}
             >
                 <option value="" disabled>Pilih Provinsi</option>
                 {data.map((item, index) => (

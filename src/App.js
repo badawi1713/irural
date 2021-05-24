@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { FormProvider } from './context'
 import { Navbar } from './views/components'
 import { Home, Registration } from './views/pages'
 
@@ -14,16 +15,18 @@ const App = () => {
     setOpen(false)
   }
   return (
-    <Router>
-      <Navbar open={open} openNavHandler={openNavHandler} closeNavHandler={closeNavHandler} />
-      <div onClick={closeNavHandler}>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/register' component={Registration} />
-          <Route render={() => <Redirect to="/" />} />
-        </Switch>
-      </div>
-    </Router>
+    <FormProvider>
+      <Router>
+        <Navbar open={open} openNavHandler={openNavHandler} closeNavHandler={closeNavHandler} />
+        <div onClick={closeNavHandler}>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/register' component={Registration} />
+            <Route render={() => <Redirect to="/" />} />
+          </Switch>
+        </div>
+      </Router>
+    </FormProvider>
   )
 }
 

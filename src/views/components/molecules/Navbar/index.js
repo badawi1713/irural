@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useContext } from 'react';
 import { createUseStyles } from 'react-jss';
 import { HashLink } from 'react-router-hash-link';
 import { ICSidebar } from '../../../../assets/icons';
 import { IMGLogo } from '../../../../assets/images';
+import { FormContext } from '../../../../context';
 
 const useStyles = createUseStyles({
     link: {
@@ -16,6 +17,10 @@ const useStyles = createUseStyles({
 
 const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
     const classes = useStyles()
+
+    const value = useContext(FormContext)
+
+    const showUserForm = value[3]
 
     return (
         <>
@@ -34,7 +39,7 @@ const Navbar = ({ open, openNavHandler, closeNavHandler }) => {
                     </nav>
                 </div>
                 <HashLink to='/register'>
-                    <button className='hidden xl:block px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
+                    <button onClick={showUserForm} className='hidden xl:block px-6 py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-md hover:from-red-700 hover:to-red-900'>
                         <p className='text-xl text-white'>
                             Daftar I-RURAL
                 </p>

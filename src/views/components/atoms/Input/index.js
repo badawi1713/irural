@@ -8,7 +8,7 @@ const Input = ({ type = 'text', label = 'Label Input', placeholder = 'Title', ic
                 <p className=' text-lg text-gray-500 font-semibold '>{label}</p>
             </label>
             {type === 'textarea' ? <textarea rows={4} className={` px-6 py-4 border border-gray-500 rounded-md w-full`}></textarea> : type === 'button' ?
-                <><button className='py-4 px-6 bg-gradient-to-r from-blue-400 to-blue-600 rounded-md hover:from-blue-500 hover:to-blue-700'>
+                <><button type='button' className='py-4 px-6 bg-gradient-to-r from-blue-400 to-blue-600 rounded-md hover:from-blue-500 hover:to-blue-700'>
                     <p className=' text-lg text-white'>{placeholder}</p>
                 </button>
                     {info &&

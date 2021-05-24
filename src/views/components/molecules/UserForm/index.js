@@ -7,19 +7,19 @@ const UserForm = () => {
         <form className='w-full'>
             <Label title='Data Diri' />
             <div className='grid grid-cols-1 gap-x-4 gap-y-4 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-4'>
-                <Input title='Nama Lengkap' type='text' icon={ICPerson} />
-                <Input title='Nomor KTP' type='text' icon={ICCard} />
-                <Input title='Nomor Telepon' type='text' icon={ICPhone} />
-                <Input title='Email' type='email' icon={ICEmail} />
+                <Input label='Nama Lengkap' type='text' icon={ICPerson} />
+                <Input label='Nomor KTP' type='text' icon={ICCard} />
+                <Input label='Nomor Telepon' type='text' icon={ICPhone} />
+                <Input label='Email' type='email' icon={ICEmail} />
             </div>
             <div className=' mb-14' />
             <Label title='Alamat' />
             <div className='grid grid-cols-1 gap-x-4 gap-y-4 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-4'>
-                <Input title='Provinsi' type='text' />
-                <Input title='Kelurahan' type='text' />
-                <Input title='Kode Pos' type='text' />
-                <Input title='Alamat Lengkap' type='textarea' icon={ICLocation} fullwidth />
-                <Input title='Bagikan Lokasi' type='button' icon={ICGps} fullwidth info={
+                <Input label='Provinsi' type='text' />
+                <Input label='Kelurahan' type='text' />
+                <Input label='Kode Pos' type='text' />
+                <Input label='Alamat Lengkap' type='textarea' icon={ICLocation} fullwidth />
+                <Input label='Bagikan Lokasi' type='button' placeholder='Bagikan Lokasi' icon={ICGps} fullwidth info={
                     '*Bagikan lokasi kamu supaya tim I-RURAL bisa mengetahui titik koordinat lokasi kamu secara detail'
                 } />
             </div>
